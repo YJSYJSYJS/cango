@@ -20,13 +20,25 @@
     font-size: 30px;
     color:#DDD;
 }
-  /* content time */
-#div_time_day{
-    width:15%;
+  /* content time div*/
+#div_timetable_day{
+    width:85%;
     height:600px;
     float:left;
-    text-align:right;
 }
+
+/* content time table */
+#table_timetable_day{
+    text-align:left;
+    font-size: 25px;
+    color:#111;
+    
+}
+
+.table_time_content{
+    border-spacing: 5px;
+}
+
   /* bottom */
 #div_bottom{
     width: 100%;
