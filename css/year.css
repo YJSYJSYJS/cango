@@ -17,8 +17,34 @@
 /* left side view menu table */
 #table_view_menu{
     text-align: center;
-    font-size: 30px;
     color:#DDD;
+}
+
+a:link{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:active{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+  /* content time div*/
+  #div_content{
+    width:75%;
+    height:600px;
+    float:left;
 }
 
 /* table content 간격 조절 */
@@ -31,13 +57,6 @@
     font-size: 30px;
     color:#111;
     border-spacing: 5px;
-}
-
-  /* content time div*/
-#div_content{
-    width:75%;
-    height:600px;
-    float:left;
 }
 
 #thead_year{
@@ -67,7 +86,6 @@
 .button_base {
     margin: 0;
     border: 0;
-    font-size: 18px;
     text-align: center;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -75,17 +93,38 @@
     -webkit-user-select: none;
     cursor: default;
 }
+
+#todo_font{
+    font-size: 18px;
+}
+
+#views_font{
+    font-size: 30px;
+}
+
 /* hover 기능 */
-.b01_simple_rollover {
+.white_btn_rollover {
     color: #000000;
     border: #000000 solid 1px;
     padding: 10px;
     background-color: #ffffff;
 }
 
-.b01_simple_rollover:hover {
+.white_btn_rollover:hover {
     color: #ffffff;
     background-color: #000000;
+}
+
+.black_btn_rollover {
+    color: #ffffff;
+    border: #ffffff solid 1px;
+    padding: 10px;
+    background-color: #000000;
+}
+
+.black_btn_rollover:hover {
+    color: #000000;
+    background-color: #ffffff;
 }
 
   /* bottom */
