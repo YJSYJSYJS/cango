@@ -45,21 +45,3 @@ ul {
     height: 12px;
     list-style-type: none;
 }
-
-
-/* --------------------------------------------------- */
-/* 공통 */
-#div_top{
-    background-color:#DF013A;
-}
-
-#div_view_menu{
-    background-color:#FF8000;
-}
-
-#div_content{
-    text-align:left;
-    font-size: 25px;
-    width: 800px;
-    color:#111;
-}
