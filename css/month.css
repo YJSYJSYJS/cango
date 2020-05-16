@@ -1,0 +1,65 @@
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* 달력 제목 */
+.c_header{
+    text-align:center;
+}
+
+/*달력 전체*/
+.this_cld{
+    background-color:#D0F5A9;
+    font-size: 13px;
+}
+
+/* 요일 칸*/
+.this_cld table thead tr th{
+    border: 1px solid #eaedef;
+}
+/*날짜 칸*/
+.this_cld table tbody td{
+    height: 81px;
+    min-height: 81px;
+    padding-left: 6px;
+    border: 1px solid #eaedef;
+    vertical-align: top;
+}
+
+/* 주말, 공휴일, 지난/다음 달 색 처리 */
+.sun_day, .h_day{
+    color:#f44e4e;
+}
+.sat_day{
+    color:#0000FF;
+}
+.m_next, .m_pre {
+    color: #A4A4A4;
+}
+
+/* 일정 */
+.this_cld table tbody ul li{
+    margin: 0;
+    height: 12px;
+    list-style-type: none;
+}
+
+
+/* --------------------------------------------------- */
+/* 공통 */
+#div_top{
+    background-color:#DF013A;
+}
+
+#div_view_menu{
+    background-color:#FF8000;
+}
+
+#div_content{
+    text-align:left;
+    font-size: 25px;
+    width: 800px;
+    color:#111;
+}
