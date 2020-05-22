@@ -2,9 +2,10 @@ from django.shortcuts import render
 from .models import Post
 
 
-def post_list(request):
+def main(request):
     posts = Post.objects.all()
-    context = {'posts': posts}
+    # context = {'posts': posts}
+    context = {}
     return render(request, 'planner/main.html', context)
 
 
@@ -20,3 +21,11 @@ def view_week(request):
     # context = {'posts': posts}
     context = {}
     return render(request, 'planner/week.html', context)
+
+
+def day(request):
+    return render(request, 'planner/day.html', {})
+
+
+def year(request):
+    return render(request, 'planner/year.html', {})
