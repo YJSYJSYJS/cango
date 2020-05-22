@@ -1,0 +1,18 @@
+.tt_head{
+}
+
+.time_table_week table{
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+/*시간표에 기본적으로 양옆만 경계선*/
+.time_table_week table tbody tr td{
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+
+/*time_table thead, time_idx 는 사방에 경계선*/
+.time_table_week table thead tr th, .time_idx{
+    border: 1px solid #000000;
+}

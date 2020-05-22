@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Month</title>
+    <link rel="stylesheet" href="{% static 'css/day.css' %}">
+    <link rel="stylesheet" href="{% static 'css/month.css' %}">
+</head>
+<body>
+    <div id = "div_top">
+        <h1>MONTH</h1>
+    </div>
+
+<!--    <div id = "div_view_menu">-->
+<!--        <table id="table_view_menu">-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <a href="day.html">Day</a>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <a href="week.html">Week</a>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <a href="month.html">Month</a>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <a href="year.html">Year</a>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </div>-->
+
+    <div id = "div_content">
+        <div class="calender">
+            <div class="c_header">
+                <button> < </button>
+                <span> 2020년 5월 </span>
+                <button> > </button>
+            </div>
+            <div class="this_cld">
+                <table>
+                    <colgroup>
+                        <col width="83">
+                        <col width="83">
+                        <col width="83">
+                        <col width="83">
+                        <col width="83">
+                        <col width="83">
+                        <col width="83">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <span>일</span>
+                            </th>
+                            <th scope="col">
+                                <span>월</span>
+                            </th>
+                            <th scope="col">
+                                <span>화</span>
+                            </th>
+                            <th scope="col">
+                                <span>수</span>
+                            </th>
+                            <th scope="col">
+                                <span>목</span>
+                            </th>
+                            <th scope="col">
+                                <span>금</span>
+                            </th>
+                            <th scope="col" class="sat">
+                                <span>토</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="calendarTableBody">
+                        <tr>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_pre">26</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_pre">27</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_pre">28</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_pre">29</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_pre">30</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">1</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sat_day">2</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sun_day">3</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">4</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day h_day">5</div>
+                                    </div>
+                                    <ul>
+                                        <li>어린이날</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">6</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">7</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">8</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sat_day">9</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sun_day">10</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">11</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">12</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">13</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">14</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">15</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sat_day">16</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sun_day">17</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">18</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">19</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">20</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">21</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">22</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sat_day">23</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sun_day">24</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">25</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">26</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">27</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">28</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day">29</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sat_day">30</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day sun_day">31</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_next">1</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_next">2</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_next">3</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_next">4</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_next">5</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cld_date">
+                                    <div class="date_head">
+                                        <div class="cld_day m_next">6</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id = "div_todo">
+        <div class="button_base b01_simple_rollover">Todo</div>
+    </div>
+
+
+<!--    <div id = "div_right">-->
+<!--        <div> To do </div>-->
+<!--    </div>-->
+
+    <div id = "div_bottom">
+    </div>
+
+</body>
+</html>

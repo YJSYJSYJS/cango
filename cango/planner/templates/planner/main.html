@@ -6,10 +6,10 @@
 </head>
 <body>
     <h1>Planner Main Page!!!</h1>
-    {% for post in posts %}
-        <p>{{ post.id }}: {{ post }}</p>
-        <p>내용: {{ post.text }}</p>
-    {% endfor %}
+    <ul>
+        <li>2. <a href="{% url 'week' %}">Week</a></li>
+        <li>3. <a href="{% url 'month' %}">Month</a></li>
+    </ul>
     <p></p>
 </body>
 </html>
