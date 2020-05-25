@@ -7,14 +7,18 @@
 {% endblock %}
 
 {% block title %}
-<h1>To do</h1>
+<h1>To Do</h1>
 {% endblock %}
 
 {% block content %}
-    <ul>
-        <li>1. <a href="{% url 'day' %}">Day</a></li>
-        <li>2. <a href="{% url 'week' %}">Week</a></li>
-        <li>3. <a href="{% url 'month' %}">Month</a></li>
-        <li>4. <a href="{% url 'year' %}">Year</a></li>
-    </ul>
+<div id="div_content">
+    <table>
+        <tr><td>task A</td></tr>
+        <tr><td>task B</td></tr>
+        <tr><td>task C</td></tr>
+        <tr><td>appointment A</td></tr>
+        <tr><td>task D</td></tr>
+        <tr><td>task E</td></tr>
+    </table>
+</div>
 {% endblock %}

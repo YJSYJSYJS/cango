@@ -2,6 +2,13 @@
 
 }
 
+/* content time div*/
+#div_content{
+    height:600px;
+    float:left;
+    width: 75%;
+}
+
 .time_table_week table{
     border: 1px solid #000000;
     width: 100%;
