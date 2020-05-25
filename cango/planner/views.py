@@ -34,14 +34,14 @@ def year(request):
 
 
 def enroll(request):
-    if request.method == 'Post':
-        form = PostForm(request.Post)
+    if request.method == 'POST':
+        form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             # post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('main')
+            return redirect('day')
     else:
         form = PostForm()
     context = {'form': form}
