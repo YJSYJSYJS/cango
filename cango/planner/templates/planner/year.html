@@ -1,42 +1,16 @@
-<!DOCTYPE html>
+{% extends './base.html' %}
+
 {% load static %}
-<html>
-    <head>
-        <!-- emmet -->
-        <link rel="stylesheet" type="text/css" href="{% static 'css/year.css' %}">
-    </head>
-    <body>
-        <div id = "div_top">
-            <h1>Year</h1>  
-        </div>
-          
-        <div id = "div_view_menu">
-            <table id="table_view_menu" id = "views_font">
-                <tr>
-                    <td>
-                        <div class="button_base black_btn_rollover"><a href="day.html">Day</a></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="button_base black_btn_rollover"><a href="week.html">Week</a></div>    
-                    </td>   
-                </tr>
-                <tr>
-                    <td>
-                        <div class="button_base black_btn_rollover"><a href="Month.html">Month</a></div>
-                        
-                    </td>   
-                </tr>
-                <tr>
-                    <td>
-                        <div class="button_base black_btn_rollover"><a href="year.html">Year</a></div>
-                        
-                    </td>   
-                </tr>
-            </table>
-        </div>
-          
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/year.css' %}">
+{% endblock %}
+
+{% block title %}
+<h1>Year</h1>  
+{% endblock %}
+         
+{% block content %}          
         <div id = "div_content">
             <table id = "year_view_month_tr">
                 <thead id = "thead_year">
@@ -100,15 +74,4 @@
                 
             </table>      
         </div>
-        
-        <div id = "div_todo">
-            <div class="button_base black_btn_rollover">Todo</div>
-        </div>
-          
-        <div id = "div_bottom">
-            
-        </div>
-            
-    </body>
-    
-</html>
+{% endblock %}

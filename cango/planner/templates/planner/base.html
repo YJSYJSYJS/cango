@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <!-- emmet -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+        <div id = "div_top">
+            {% block title %}      
+            {% endblock %}
+        </div>
+          
+        <div id = "div_view_menu">
+            <table id="table_view_menu" id = "views_font">
+                <tr>
+                    <td>
+                        <div class="button_base black_btn_rollover"><a href="{% url 'day' %}">Day</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button_base black_btn_rollover"><a href="{% url 'week' %}">Week</a></div>    
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button_base black_btn_rollover"><a href="{% url 'month' %}">Month</a></div>
+                        
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button_base black_btn_rollover"><a href="{% url 'year' %}">Year</a></div>
+                        
+                    </td>   
+                </tr>
+            </table>  
+        </div>
+        {% block content %}      
+        {% endblock %}
+
+        <div id = "div_todo" id = "todo_font">
+            <div class="button_base black_btn_rollover">Todo</div>
+        </div>
+          
+        <div id = "div_bottom">
+            
+        </div>
+            
+    </body>
+    
+</html>
