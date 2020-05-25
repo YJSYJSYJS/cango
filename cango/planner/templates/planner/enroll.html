@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enroll</title>
+</head>
+<body>
+    <h1>New Post</h1>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="enroll btn">Enroll</button>
+    </form>
+    <h1>{{ chk }}</h1>
+
+</body>
+</html>
