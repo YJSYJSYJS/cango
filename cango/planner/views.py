@@ -2,11 +2,11 @@ from django.shortcuts import render
 from .models import Post
 
 
-def main(request):
+def todo(request):
     posts = Post.objects.all()
     # context = {'posts': posts}
     context = {}
-    return render(request, 'planner/main.html', context)
+    return render(request, 'planner/todo.html', context)
 
 
 def view_month(request):

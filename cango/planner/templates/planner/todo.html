@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>HOME</title>
-</head>
-<body>
-    <h1>Planner Main Page!!!</h1>
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/todo.css' %}">
+{% endblock %}
+
+{% block title %}
+<h1>To do</h1>
+{% endblock %}
+
+{% block content %}
     <ul>
         <li>1. <a href="{% url 'day' %}">Day</a></li>
         <li>2. <a href="{% url 'week' %}">Week</a></li>
         <li>3. <a href="{% url 'month' %}">Month</a></li>
         <li>4. <a href="{% url 'year' %}">Year</a></li>
     </ul>
-    <p></p>
-</body>
-</html>
+{% endblock %}
