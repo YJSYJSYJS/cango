@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Post
+from .forms import PostForm
+from django.utils import timezone
 
 
 def todo(request):
@@ -29,3 +31,18 @@ def day(request):
 
 def year(request):
     return render(request, 'planner/year.html', {})
+
+
+def enroll(request):
+    if request.method == 'Post':
+        form = PostForm(request.Post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            # post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('main')
+    else:
+        form = PostForm()
+    context = {'form': form}
+    return render(request, 'planner/enroll.html', context)
