@@ -13,12 +13,9 @@
 {% block content %}
 <div id="div_content">
     <table>
-        <tr><td>task A</td></tr>
-        <tr><td>task B</td></tr>
-        <tr><td>task C</td></tr>
-        <tr><td>appointment A</td></tr>
-        <tr><td>task D</td></tr>
-        <tr><td>task E</td></tr>
+        {% for post in posts %}
+            <tr><td>{{ post.title }}</td></tr>
+        {% endfor %}
     </table>
 </div>
 {% endblock %}

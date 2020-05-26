@@ -7,7 +7,7 @@ from django.utils import timezone
 def todo(request):
     posts = Post.objects.all()
     # context = {'posts': posts}
-    context = {}
+    context = {'posts': posts}
     return render(request, 'planner/todo.html', context)
 
 
