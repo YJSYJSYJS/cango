@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect
 
 from . import calView
+from . import ttView
 from .models import Post
 from .forms import PostForm
 from django.utils import timezone
 
 
 def todo(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('end_date')
     # context = {'posts': posts}
     context = {'posts': posts}
     return render(request, 'planner/todo.html', context)
@@ -25,8 +26,7 @@ def view_month(request):
 def view_week(request):
     # posts = Post.objects.all()
     # context = {'posts': posts}
-    context = {}
-    return render(request, 'planner/week.html', context)
+    return ttView.tt_view(request)
 
 
 def day(request):

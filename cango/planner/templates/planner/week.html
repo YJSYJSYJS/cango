@@ -14,155 +14,38 @@
     <div id="div_content">
         <div class="tt_head">
             <button> < </button>
-            <span> 2020년 5월 1주차</span>
+            <span></span>
             <button> > </button>
+            <span> Today: {{today}}</span>
         </div>
         <div class="time_table_week">
             <table>
                 <thead>
                     <tr>
                         <th class="dsc">시간</th>
+                        {% for day in days %}
                         <th>
-                            <span>일</span>
-                            <span>(17)</span>
+                            <span>{{day}}</span>
                         </th>
-                        <th>
-                            <span>월</span>
-                            <span>(18)</span>
-                        </th>
-                        <th>
-                            <span>화</span>
-                            <span>(19)</span>
-                        </th>
-                        <th>
-                            <span>수</span>
-                            <span>(20)</span>
-                        </th>
-                        <th>
-                            <span>목</span>
-                            <span>(21)</span>
-                        </th>
-                        <th>
-                            <span>금</span>
-                            <span>(22)</span>
-                        </th>
-                        <th>
-                            <span>토</span>
-                            <span>(23)</span>
-                        </th>
+                        {% endfor %}
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="time_idx">08</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">09</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">10</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">11</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">12</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">13</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">14</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">15</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">16</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">17</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
-                    <tr>
-                        <td class="time_idx">18</td>
-                        <td class="sun_day"></td>
-                        <td class="mon_day"></td>
-                        <td class="tues_day"></td>
-                        <td class="wed_day"></td>
-                        <td class="thus_day"></td>
-                        <td class="fri_day"></td>
-                        <td class="sat_day"></td>
-                    </tr>
+                <script>
+                        /* <$$$> 많이 수정해야함 */
+                        var num = 5;
+                        for(var i=0;i<num;i++){
+                            var row = "<tr><td>" + String(i) + "시</td>\
+                                        <td class='sun_day'></td>\
+                                        <td class='mon_day'></td>\
+                                        <td class='tues_day'></td>\
+                                        <td class='wed_day'></td>\
+                                        <td class='thus_day'></td>\
+                                        <td class='fri_day'></td>\
+                                        <td class='sat_day'></td></tr>";
+                            document.write(row);
+                        }
+                    </script>
                 </tbody>
             </table>
         </div>
