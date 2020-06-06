@@ -20,3 +20,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ContestEvent(models.Model):
+    date_of_event = models.DateTimeField(blank=True, null=True)
+    pass

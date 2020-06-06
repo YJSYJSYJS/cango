@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+
+from . import calView
 from .models import Post
 from .forms import PostForm
 from django.utils import timezone
@@ -14,8 +16,10 @@ def todo(request):
 def view_month(request):
     # posts = Post.objects.all()
     # context = {'posts': posts}
-    context = {}
-    return render(request, 'planner/month.html', context)
+    # cal_html = calendar.HTMLCalendar(firstweekday=0)
+    # context = {'cal_html': cal_html.formatmonth(2020, 6)}
+    # return render(request, 'planner/month.html', context)
+    return calView.home(request)
 
 
 def view_week(request):
