@@ -1,0 +1,35 @@
+/* content time div*/
+#div_content{
+    width:75%;
+    height:600px;
+    float:left;
+}
+
+/* table content 간격 조절 */
+.table_time_content{
+    border-spacing: 5px;
+}
+
+#year_view_month_tr{
+    text-align: center;
+    font-size: 30px;
+    color:#111;
+    border-spacing: 5px;
+}
+
+#thead_year{
+    font-size: 40px;
+    color: #111;
+}
+
+#thead_year tr th{
+    border-bottom: solid black;
+}
+
+#thead_year tr td{
+    border-bottom: solid black;
+}
+
+#year_view_month_tr tbody tr td{
+    background-color: burlywood;
+}

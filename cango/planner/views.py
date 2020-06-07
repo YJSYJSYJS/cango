@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 
 from . import calView
 from .models import Post
+
 from .forms import PostForm
 from django.utils import timezone
+from django.contrib.auth.hashers import make_password
 
 
 def todo(request):

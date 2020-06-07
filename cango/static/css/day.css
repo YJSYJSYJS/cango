@@ -1,0 +1,19 @@
+/* content time div*/
+#div_content{
+    width:75%;
+    height:600px;
+    float:left;
+}
+
+/* content time table */
+#table_timetable_day{
+    text-align:left;
+    font-size: 25px;
+    color:#111;    
+}
+
+/* table content 간격 조절 */
+.table_time_content{
+    border-spacing: 5px;
+}
+
