@@ -24,5 +24,6 @@ class Post(models.Model):
 
 
 class ContestEvent(models.Model):
+    title = models.CharField(max_length=200,blank=True, null=True)
     date_of_event = models.DateTimeField(blank=True, null=True)
     pass
