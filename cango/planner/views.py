@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 
 from . import calView
 from . import ttView
@@ -8,6 +9,7 @@ from .forms import PostForm
 from django.utils import timezone
 from django.contrib.auth.hashers import make_password
 
+from register.models import Puser
 
 def todo(request):
     posts = Post.objects.all().order_by('end_date')
@@ -32,8 +34,14 @@ def view_week(request):
 
 
 def day(request):
-    return render(request, 'planner/day.html', {})
+    user_id = request.session.get('user')
 
+    if user_id:
+        puser = Puser.objects.get(pk=user_id)
+        return HttpResponse(puser.username)
+
+    return render(request, 'planner/day.html', {})
+    # return HttpResponse('planner/day.html')
 
 def year(request):
     return render(request, 'planner/year.html', {})

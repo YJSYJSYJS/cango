@@ -17,28 +17,28 @@
             <table id="table_view_menu" id = "views_font">
                 <tr>
                     <td>
-                        <a href="{% url 'day' %}"><div class="button_base black_btn_rollover">Day</div></a>
+                        <a href="{% url 'planner:day' %}"><div class="button_base black_btn_rollover">Day</div></a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="{% url 'week' %}"><div class="button_base black_btn_rollover">Week</div></a>    
+                        <a href="{% url 'planner:week' %}"><div class="button_base black_btn_rollover">Week</div></a>    
                     </td>   
                 </tr>
                 <tr>
                     <td>
-                        <a href="{% url 'month' %}"><div class="button_base black_btn_rollover">Month</div></a>
+                        <a href="{% url 'planner:month' %}"><div class="button_base black_btn_rollover">Month</div></a>
                         
                     </td>   
                 </tr>
                 <tr>
                     <td>
-                        <a href="{% url 'year' %}"><div class="button_base black_btn_rollover">Year</div></a>
+                        <a href="{% url 'planner:year' %}"><div class="button_base black_btn_rollover">Year</div></a>
                     </td>   
                 </tr>
                 <tr>
                     <td>
-                        <a href="{% url 'enroll' %}"><div class="button_base black_btn_rollover">Enroll</div></a>
+                        <a href="{% url 'planner:enroll' %}"><div class="button_base black_btn_rollover">Enroll</div></a>
                     </td>
                 </tr>
             </table>  
@@ -47,7 +47,7 @@
         {% endblock %}
 
         <div id = "div_todo" id = "todo_font">
-            <a href="{% url 'todo' %}"><div class="button_base black_btn_rollover">Todo</div></a>
+            <a href="{% url 'planner:todo' %}"><div class="button_base black_btn_rollover">Todo</div></a>
         </div>
           
         <div id = "div_bottom">

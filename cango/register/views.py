@@ -1,4 +1,31 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.contrib.auth.hashers import make_password, check_password
+from .models import Puser
+
+
+def login(request):
+    if request.method == 'GET':
+        return render(request, 'register/login.html')
+    elif request.method == 'POST':
+        username = request.POST.get('username', None)
+        password = request.POST.get('password', None)
+
+        res_data = {}
+        if not (username and password):
+            res_data['error'] = '모든 값을 입력해야합니다.'
+        else:
+            puser = Puser.objects.get(username=username)
+            if check_password(password, puser.password):
+                # 비밀번호가 일치 - 로그인 처리
+                # 세션!
+                # redirect
+                request.session['user'] = puser.id # 세션마다 user키에 puser.id value를 넣어준다. 세션관리는 장고가 알아서 해줌
+                return redirect('/')
+            else:
+                res_data['error'] = '비밀번호가 틀렸습니다.'
+        
+        return render(request, 'register/login.html', res_data)
 
 def register(request):
     if request.method == 'GET':
@@ -22,4 +49,7 @@ def register(request):
                 useremail = useremail,
                 password=make_password(password)
             )
-        return render(request, 'register.html', res_data)
+            puser.save()
+
+
+        return render(request, 'register/register.html', res_data)
