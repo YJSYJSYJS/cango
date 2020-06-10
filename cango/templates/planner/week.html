@@ -33,19 +33,36 @@
                 <tbody>
                 <script>
                         /* <$$$> 많이 수정해야함 */
-                        var num = 5;
+                        var num = 24;
+                        var shell = "-----";
+                        var t_str = "";
                         for(var i=0;i<num;i++){
-                            var row = "<tr><td>" + String(i) + "시</td>\
-                                        <td class='sun_day'></td>\
-                                        <td class='mon_day'></td>\
-                                        <td class='tues_day'></td>\
-                                        <td class='wed_day'></td>\
-                                        <td class='thus_day'></td>\
-                                        <td class='fri_day'></td>\
-                                        <td class='sat_day'></td></tr>";
-                            document.write(row);
+                            t_str = String(i);
+                            if (i<10){
+                                t_str = "0" + t_str;
+                            }
+                            document.write("<tr class=\"" + t_str +"t\"><td>" + String(i) + "시</td>");
+                            for (var j=0;j<7;j++){
+                                document.write("<td class=" + String(j) + "week>" + shell +"</td>");
+                            }
+                            document.write("</tr>");
                         }
+
+                        //document.write("<tr><td>schedule</td>");
+                        {% for event in events %}
+                            //document.write("<td>{{event.title}}</td>");
+                            //document.write("<td>{{event.date}}일 {{event.time}}시 {{event.weekday}}요일</td>");
+                            var ct = document.getElementsByClassName("{{event.time}}t");
+                            ct[0].childNodes[{{event.weekday}}+1].innerHTML += "<br/>{{event.title}}";
+                        {% endfor %}
+                        //document.write("</tr>");
+
+
+                        //alert(ct[0].firstChild.firstChild.nodeValue);
+
+
                     </script>
+
                 </tbody>
             </table>
         </div>
