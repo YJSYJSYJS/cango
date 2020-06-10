@@ -8,6 +8,11 @@
         {% endblock %}
     </head>
     <body>
+
+        <div id="div_acc">
+
+        </div>
+
         <div id = "div_top">
             {% block title %}      
             {% endblock %}
@@ -27,8 +32,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="{% url 'planner:month' %}"><div class="button_base black_btn_rollover">Month</div></a>
-                        
+                        <a href="{% url 'planner:month' %}"><div class="button_base black_btn_rollover">Month</div></a>                
                     </td>   
                 </tr>
                 <tr>
@@ -39,6 +43,11 @@
                 <tr>
                     <td>
                         <a href="{% url 'planner:enroll' %}"><div class="button_base black_btn_rollover">Enroll</div></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="{% url 'register:login' %}"><div class="button_base black_btn_rollover">Logout</div></a>
                     </td>
                 </tr>
             </table>  
