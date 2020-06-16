@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-2">
                     <div class="row">
-                        ID: {{ request.session.LoginForm.user_id }}
+                        ID: {{ request.session.user }}
                     </div>
                     <div class="row">
                         <a href="{% url 'register:logout' %}"><div class="button_base black_btn_rollover">Logout</div></a>
