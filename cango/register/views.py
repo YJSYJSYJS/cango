@@ -17,11 +17,13 @@ def login(request):
 
     return render(request, 'register/login.html', {'form': form})
 
+
 def logout(request):
     if request.session.get('user'):
         del(request.session['user'])
     
     return redirect('/')
+
 
 def register(request):
     if request.method == 'GET':
@@ -48,7 +50,6 @@ def register(request):
                 password=make_password(password)
             )
             puser.save()
-
 
         return redirect('/')
         
