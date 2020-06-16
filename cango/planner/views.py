@@ -1,10 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
 
-from . import calView
-from . import ttView
+from . import calView, ttView, dayView
 from .models import Post
 
 from .forms import PostForm
@@ -37,14 +36,15 @@ def view_week(request):
 
 
 def day(request):
-    user_id = request.session.get('user')
-
-    if user_id:
-        puser = Puser.objects.get(pk=user_id)
-        account = {'user_name' : puser}
-        # return HttpResponse(puser.username)
-        return render(request, 'planner/day.html', account)
+    # user_id = request.session.get('user')
+    #
+    # if user_id:
+    #     puser = Puser.objects.get(pk=user_id)
+    #     account = {'user_name': puser}
+    #     # return HttpResponse(puser.username)
+    #     return render(request, 'planner/day.html', account)
     # return HttpResponse('planner/day.html')
+    return dayView.day_view(request)
 
 
 def year(request):
@@ -59,7 +59,7 @@ def enroll(request):
             # post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return HttpResponseRedirect('todo')
+            return redirect('planner:todo')
     else:
         form = PostForm()
     context = {'form': form}
