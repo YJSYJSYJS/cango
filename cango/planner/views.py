@@ -41,9 +41,9 @@ def day(request):
 
     if user_id:
         puser = Puser.objects.get(pk=user_id)
-        return HttpResponse(puser.username)
-
-    return render(request, 'planner/day.html', {})
+        account = {'user_name' : puser}
+        # return HttpResponse(puser.username)
+        return render(request, 'planner/day.html', account)
     # return HttpResponse('planner/day.html')
 
 

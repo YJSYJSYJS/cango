@@ -3,13 +3,15 @@ from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password, check_password
 from .models import Puser
 from .forms import LoginForm
+from planner.views import day
 
 def login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
             request.session['user'] = form.user_id
-            return redirect('/')
+            return redirect('planner:day')
+            # return render(request, 'planner/day.html', {'form': form})
     else:
         form = LoginForm()
 
@@ -34,9 +36,11 @@ def register(request):
 
         if not (username and useremail and password and re_password):
             res_data['error'] = '모든 값을 입력해야합니다.'
-
+            return render(request, 'register/register.html', res_data)
+        
         if password != re_password:
             res_data['error'] = '비밀번호가 다릅니다.'
+            return render(request, 'register/register.html', res_data)
         else:
             puser = Puser(
                 username=username,
@@ -46,4 +50,5 @@ def register(request):
             puser.save()
 
 
-        return render(request, 'register/register.html', res_data)
+        return redirect('')
+        
