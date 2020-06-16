@@ -2,6 +2,7 @@ from django import forms
 from .models import Puser
 from django.contrib.auth.hashers import check_password
 
+
 class LoginForm(forms.Form):
     username = forms.CharField(
         error_messages={

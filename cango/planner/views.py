@@ -1,5 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from django.http import HttpResponse
+from django.urls import reverse
 
 from . import calView
 from . import ttView
@@ -10,6 +12,7 @@ from django.utils import timezone
 from django.contrib.auth.hashers import make_password
 
 from register.models import Puser
+
 
 def todo(request):
     posts = Post.objects.all().order_by('end_date')
@@ -43,6 +46,7 @@ def day(request):
     return render(request, 'planner/day.html', {})
     # return HttpResponse('planner/day.html')
 
+
 def year(request):
     return render(request, 'planner/year.html', {})
 
@@ -55,7 +59,7 @@ def enroll(request):
             # post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('todo')
+            return HttpResponseRedirect('todo')
     else:
         form = PostForm()
     context = {'form': form}
