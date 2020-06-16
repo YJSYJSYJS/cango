@@ -59,7 +59,7 @@ def enroll(request):
             # post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return HttpResponseRedirect('todo')
+            return redirect('planner:todo')
     else:
         form = PostForm()
     context = {'form': form}

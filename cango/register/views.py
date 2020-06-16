@@ -50,5 +50,5 @@ def register(request):
             puser.save()
 
 
-        return redirect('')
+        return redirect('/')
         
